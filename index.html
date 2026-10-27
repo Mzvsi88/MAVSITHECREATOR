@@ -1,984 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <title>Mavsi The Creator | Cinematography & Video Editing</title>
-  <meta name="description" content="Mavsi The Creator is a cinematographer and video editor creating cinematic visuals, event films, brand commercials and storytelling experiences.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://mzvsi88.github.io/MAVSITHECREATOR/">
-  <meta property="og:title" content="Mavsi The Creator">
-  <meta property="og:description" content="Every frame tells a story. Discover cinematic visuals by Mavsi The Creator.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #080808;
-      --panel: #111111;
-      --text: #f5f5f2;
-      --muted: #999995;
-      --accent: #d6ff3f;
-      --line: rgba(255,255,255,.12);
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "DM Sans", sans-serif;
-      overflow-x: hidden;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    button {
-      font: inherit;
-    }
-    ::selection {
-      background: var(--accent);
-      color: #080808;
-    }
-    .noise {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 20;
-      opacity: .035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
-    }
-    .container {
-      width: min(1180px, 90%);
-      margin: auto;
-    }
-    .eyebrow {
-      color: var(--accent);
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 700;
-    }
-    .section {
-      padding: 110px 0;
-    }
-    .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 25px;
-      margin-bottom: 45px;
-    }
-    .section-heading h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.4rem, 6vw, 5rem);
-      line-height: .98;
-      letter-spacing: -3px;
-      margin-top: 16px;
-    }
-    .section-heading p {
-      color: var(--muted);
-      max-width: 340px;
-      line-height: 1.8;
-      font-size: .9rem;
-    }
-    /* NAVIGATION */
-    header {
-      position: fixed;
-      z-index: 50;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(8,8,8,.78);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,.07);
-    }
-    nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: "Space Grotesk", sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: -.5px;
-    }
-    .logo span {
-      color: var(--accent);
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-      font-size: .82rem;
-      color: #d1d1cd;
-    }
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-    .nav-cta {
-      border: 1px solid var(--accent);
-      padding: 12px 18px;
-      color: var(--accent);
-      font-size: .78rem;
-      transition: .3s;
-    }
-    .nav-cta:hover {
-      background: var(--accent);
-      color: #080808;
-    }
-    .menu-toggle {
-      display: none;
-      color: white;
-      background: none;
-      border: 0;
-      font-size: 1.7rem;
-      cursor: pointer;
-    }
-    /* HERO */
-    .hero {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 130px 0 70px;
-      background:
-        linear-gradient(90deg, rgba(8,8,8,.97) 0%, rgba(8,8,8,.82) 48%, rgba(8,8,8,.35) 100%),
-        linear-gradient(0deg, #080808 0%, transparent 35%),
-        url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=90") center/cover;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 480px;
-      height: 480px;
-      right: -180px;
-      top: 15%;
-      background: var(--accent);
-      filter: blur(180px);
-      opacity: .10;
-      border-radius: 50%;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-    }
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 40px;
-      padding: 10px 15px;
-      color: #d6d6d2;
-      font-size: .76rem;
-      margin-bottom: 32px;
-      animation: rise .8s both;
-    }
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 12px var(--accent);
-    }
-    .hero h1 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(3.4rem, 10.3vw, 9rem);
-      letter-spacing: -.085em;
-      line-height: .86;
-      font-weight: 700;
-      animation: rise 1s .1s both;
-    }
-    .hero h1 .outline {
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(255,255,255,.7);
-    }
-    .hero h1 .highlight {
-      color: var(--accent);
-    }
-    .hero-copy {
-      max-width: 500px;
-      color: #b9b9b4;
-      font-size: 1rem;
-      line-height: 1.9;
-      margin-top: 32px;
-      animation: rise 1s .2s both;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 32px;
-      animation: rise 1s .3s both;
-    }
-    .button {
-      min-height: 52px;
-      padding: 0 23px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      font-size: .82rem;
-      font-weight: 700;
-      transition: transform .3s, background .3s;
-    }
-    .button:hover {
-      transform: translateY(-4px);
-    }
-    .button-primary {
-      background: var(--accent);
-      color: #090909;
-    }
-    .button-secondary {
-      border: 1px solid rgba(255,255,255,.3);
-      color: white;
-    }
-    .hero-bottom {
-      position: absolute;
-      bottom: 28px;
-      left: 5%;
-      right: 5%;
-      display: flex;
-      justify-content: space-between;
-      color: #aaa;
-      font-size: .7rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-    /* MARQUEE */
-    .marquee {
-      overflow: hidden;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 22px 0;
-      background: #0c0c0c;
-    }
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 28s linear infinite;
-    }
-    .marquee span {
-      padding: 0 25px;
-      white-space: nowrap;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-    .marquee .star {
-      color: var(--accent);
-    }
-    /* WORK */
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 24px;
-    }
-    .work-card {
-      min-width: 0;
-      cursor: pointer;
-    }
-    .work-image {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 16/10;
-      background: #171717;
-    }
-    .work-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(.75);
-      transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .6s;
-    }
-    .work-card:hover img {
-      transform: scale(1.07);
-      filter: saturate(1);
-    }
-    .work-image::after {
-      content: "↗";
-      position: absolute;
-      right: 18px;
-      bottom: 18px;
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      background: var(--accent);
-      color: #080808;
-      font-size: 1.3rem;
-      transform: translateY(70px);
-      transition: .4s;
-    }
-    .work-card:hover .work-image::after {
-      transform: translateY(0);
-    }
-    .work-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      padding: 19px 0 8px;
-    }
-    .work-meta h3 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.25rem;
-    }
-    .work-meta span {
-      color: var(--muted);
-      font-size: .75rem;
-      text-align: right;
-      padding-top: 5px;
-    }
-    .work-note {
-      color: var(--muted);
-      font-size: .82rem;
-      line-height: 1.7;
-    }
-    .portfolio-note {
-      margin-top: 30px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: .85rem;
-      line-height: 1.8;
-    }
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 75px;
-      align-items: center;
-    }
-    .about-visual {
-      min-height: 490px;
-      position: relative;
-      background:
-        linear-gradient(0deg, rgba(0,0,0,.5), transparent),
-        url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1000&q=85") center/cover;
-    }
-    .about-stamp {
-      position: absolute;
-      bottom: 25px;
-      left: 25px;
-      padding: 15px 18px;
-      background: var(--accent);
-      color: #080808;
-      font-family: "Space Grotesk", sans-serif;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-    .about-text h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.7rem, 5vw, 4.6rem);
-      letter-spacing: -3px;
-      line-height: 1;
-      margin: 17px 0 25px;
-    }
-    .about-text h2 span {
-      color: var(--accent);
-    }
-    .about-text p {
-      color: #aaa;
-      font-size: .95rem;
-      line-height: 2;
-      margin-bottom: 17px;
-    }
-    .facts {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 28px;
-    }
-    .fact {
-      border-top: 1px solid var(--line);
-      padding-top: 15px;
-    }
-    .fact strong {
-      display: block;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1rem;
-      margin-bottom: 5px;
-    }
-    .fact span {
-      color: var(--muted);
-      font-size: .78rem;
-    }
-    /* SERVICES */
-    .services {
-      background: #0d0d0d;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .service-list {
-      border-top: 1px solid var(--line);
-    }
-    .service {
-      display: grid;
-      grid-template-columns: 70px 1fr 50px;
-      gap: 20px;
-      align-items: center;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-      transition: padding .3s;
-    }
-    .service:hover {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-    .service-number {
-      color: var(--accent);
-      font-size: .8rem;
-    }
-    .service h3 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.35rem, 3vw, 2.1rem);
-      margin-bottom: 7px;
-    }
-    .service p {
-      color: var(--muted);
-      font-size: .85rem;
-      line-height: 1.7;
-    }
-    .service-arrow {
-      font-size: 1.5rem;
-      color: var(--accent);
-      text-align: right;
-    }
-    /* CONTACT */
-    .contact-box {
-      position: relative;
-      overflow: hidden;
-      background: var(--accent);
-      color: #080808;
-      padding: clamp(35px, 8vw, 90px);
-    }
-    .contact-box::after {
-      content: "M";
-      position: absolute;
-      right: -20px;
-      bottom: -150px;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 28rem;
-      line-height: 1;
-      font-weight: 700;
-      opacity: .07;
-      pointer-events: none;
-    }
-    .contact-box .eyebrow {
-      color: #303b0b;
-    }
-    .contact-box h2 {
-      position: relative;
-      z-index: 1;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(3rem, 8vw, 7rem);
-      letter-spacing: -.08em;
-      line-height: .95;
-      margin: 22px 0;
-    }
-    .contact-box p {
-      max-width: 450px;
-      font-size: .95rem;
-      line-height: 1.8;
-      margin-bottom: 28px;
-    }
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      position: relative;
-      z-index: 2;
-    }
-    .dark-button {
-      background: #080808;
-      color: white;
-    }
-    .outline-button {
-      border: 1px solid rgba(0,0,0,.45);
-      color: #080808;
-    }
-    /* FOOTER */
-    footer {
-      padding: 30px 0;
-    }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .footer-copy {
-      color: var(--muted);
-      font-size: .75rem;
-      line-height: 1.8;
-    }
-    .socials {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      font-size: .8rem;
-    }
-    .socials a:hover {
-      color: var(--accent);
-    }
-    /* REVEAL ANIMATIONS */
-    .reveal {
-      opacity: 0;
-      transform: translateY(35px);
-      transition: opacity .8s ease, transform .8s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(28px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    /* MOBILE */
-    @media (max-width: 760px) {
-      .section {
-        padding: 78px 0;
-      }
-      nav {
-        min-height: 70px;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links {
-        position: absolute;
-        top: 69px;
-        left: 0;
-        width: 100%;
-        padding: 25px 5% 30px;
-        background: #0b0b0b;
-        border-bottom: 1px solid var(--line);
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 23px;
-      }
-      .nav-links.open {
-        display: flex;
-      }
-      .nav-cta {
-        display: none;
-      }
-      .hero {
-        min-height: 92svh;
-        background-position: 58% center;
-      }
-      .hero h1 {
-        font-size: clamp(3.2rem, 15vw, 6.2rem);
-      }
-      .hero-copy {
-        font-size: .9rem;
-      }
-      .hero-bottom {
-        font-size: .58rem;
-        gap: 15px;
-      }
-      .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-      .section-heading h2 {
-        letter-spacing: -2px;
-      }
-      .work-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-      .about-visual {
-        min-height: 390px;
-      }
-      .service {
-        grid-template-columns: 35px 1fr 25px;
-        gap: 12px;
-      }
-      .service p {
-        font-size: .78rem;
-      }
-      .contact-box h2 {
-        letter-spacing: -3px;
-      }
-      .footer-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Mavsi The Creator — filmmaker, cinematographer and video editor creating cinematic stories.">
+<title>Mavsi The Creator | Cinematic Portfolio</title>
+<style>
+:root {
+  --bg: #080808;
+  --panel: #111111;
+  --text: #f5f3ef;
+  --muted: #aaa7a1;
+  --line: rgba(255,255,255,.14);
+  --accent: #d8ff3e;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.container {
+  width: min(1180px, calc(100% - 36px));
+  margin: auto;
+}
+.accent {
+  color: var(--accent);
+}
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,8,.94);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+.logo span {
+  color: var(--accent);
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: white;
+  padding: 8px 12px;
+  font-size: 18px;
+}
+.nav-contact {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 10px 14px;
+  font-size: 12px;
+}
+/* HERO */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.96), rgba(0,0,0,.52)),
+    url("https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1800")
+    center/cover no-repeat;
+}
+.hero-content {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  max-width: 850px;
+}
+.hero h1 {
+  font-size: clamp(60px, 11vw, 135px);
+  line-height: .85;
+  letter-spacing: -8px;
+  margin: 30px 0;
+  font-weight: 900;
+}
+.hero h1 span {
+  color: var(--accent);
+}
+.hero p {
+  max-width: 550px;
+  color: #d0cec8;
+  font-size: 17px;
+}
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 19px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: bold;
+  transition: .3s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn-primary {
+  background: var(--accent);
+  color: #080808;
+  border-color: var(--accent);
+}
+/* RUNNING TEXT */
+.marquee {
+  padding: 18px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: #ccc;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+.marquee span {
+  color: var(--accent);
+  padding: 0 15px;
+}
+/* GENERAL SECTIONS */
+section.content-section {
+  padding: 95px 0;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+.section-heading h2 {
+  font-size: clamp(38px, 6vw, 75px);
+  line-height: .95;
+  letter-spacing: -4px;
+  margin-top: 12px;
+}
+.section-heading p {
+  max-width: 350px;
+  color: var(--muted);
+  font-size: 14px;
+}
+/* PORTFOLIO */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 30px;
+}
+.category-list span {
+  border: 1px solid var(--line);
+  padding: 8px 13px;
+  border-radius: 30px;
+  color: #ccc;
+  font-size: 11px;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.project {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  transition: .3s;
+}
+.project:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #171717;
+}
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.project-info {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.project-info h3 {
+  font-size: 17px;
+}
+.project-info p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.project-number {
+  color: var(--accent);
+  font-size: 11px;
+  white-space: nowrap;
+}
+/* MY STORY */
+.story-section {
+  background: #e9e8df;
+  color: #111;
+  padding: 100px 0;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 65px;
+}
+.story-title {
+  position: sticky;
+  top: 110px;
+  align-self: start;
+}
+.story-title h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: .85;
+  letter-spacing: -6px;
+  margin: 18px 0;
+}
+.story-title .eyebrow {
+  color: #687819;
+}
+.story-title p {
+  color: #555;
+}
+.story-copy {
+  font-size: 16px;
+  color: #333;
+}
+.story-copy p {
+  margin-bottom: 22px;
+}
+.story-copy .lead {
+  font-size: clamp(23px, 3vw, 35px);
+  line-height: 1.3;
+  color: #111;
+  letter-spacing: -1px;
+}
+.timeline {
+  margin-top: 30px;
+  border-top: 1px solid #bbb;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid #bbb;
+}
+.timeline-item strong {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.timeline-item span {
+  font-size: 14px;
+}
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.service {
+  padding: 25px 20px;
+  min-height: 190px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.service .number {
+  color: var(--accent);
+  font-size: 11px;
+}
+.service h3 {
+  margin: 30px 0 8px;
+  font-size: 18px;
+}
+.service p {
+  color: var(--muted);
+  font-size: 13px;
+}
+/* CONTACT */
+.contact-section {
+  background: #141510;
+  border-top: 1px solid var(--line);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 55px;
+}
+.contact-title {
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: .88;
+  letter-spacing: -6px;
+  margin: 18px 0 25px;
+}
+.contact-description {
+  color: var(--muted);
+  max-width: 450px;
+}
+.contact-links {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px solid var(--line);
+  padding: 17px;
+}
+.contact-link:hover {
+  border-color: var(--accent);
+}
+.contact-link small {
+  display: block;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+.contact-link strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.contact-link .arrow {
+  color: var(--accent);
+}
+.contact-card {
+  border: 1px solid var(--line);
+  padding: 28px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(circle at top right, #252a13, #0b0b0b 60%);
+}
+.contact-card h3 {
+  font-size: 35px;
+  line-height: 1.1;
+  margin: 20px 0;
+  letter-spacing: -1px;
+}
+.contact-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+/* FOOTER */
+footer {
+  padding: 25px 0;
+  color: #999;
+  font-size: 11px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* MOBILE */
+@media(max-width: 800px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: #080808;
+    padding: 22px;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .nav-contact {
+    display: none;
+  }
+  .hero {
+    min-height: 80vh;
+  }
+  .hero h1 {
+    letter-spacing: -4px;
+  }
+  .portfolio-grid {
+    gap: 14px;
+  }
+  .story-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .story-title {
+    position: static;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading p {
+    margin-top: 18px;
+  }
+}
+@media(max-width: 520px) {
+  section.content-section {
+    padding: 70px 0;
+  }
+  .container {
+    width: calc(100% - 28px);
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 65px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service {
+    padding: 16px 12px;
+  }
+  .service h3 {
+    font-size: 15px;
+  }
+  .timeline-item {
+    grid-template-columns: 80px 1fr;
+  }
+  .section-heading h2 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+  .contact-title {
+    font-size: 65px;
+    letter-spacing: -4px;
+  }
+}
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header>
-    <nav class="container" aria-label="Main navigation">
-      <a class="logo" href="#home">MAVSI<span>.</span> THE CREATOR</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
-        ☰
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#work">Selected Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a class="nav-cta" href="#contact">LET'S TALK ↗</a>
-    </nav>
-  </header>
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <div class="availability">
-            <span class="dot"></span>
-            VISUAL STORYTELLER & VIDEO CREATOR
-          </div>
-          <h1>
-            FRAMES<br>
-            THAT <span class="outline">FEEL.</span><br>
-            STORIES<br>
-            <span class="highlight">THAT STAY.</span>
-          </h1>
-          <p class="hero-copy">
-            I’m Mavsi The Creator. I turn moments, ideas and emotions
-            into cinematic visuals that connect with people and leave
-            a lasting impression.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">EXPLORE MY WORK ↗</a>
-            <a class="button button-secondary" href="#contact">LET'S CREATE TOGETHER</a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-bottom">
-        <span>INDEPENDENT CREATOR</span>
-        <span>BASED IN NIGERIA · AVAILABLE FOR PROJECTS</span>
-      </div>
-    </section>
-    <!-- MARQUEE -->
-    <div class="marquee" aria-label="Creative services">
-      <div class="marquee-track">
-        <span>CINEMATOGRAPHY</span><span class="star">✳</span>
-        <span>VIDEO EDITING</span><span class="star">✳</span>
-        <span>VISUAL STORYTELLING</span><span class="star">✳</span>
-        <span>BRAND FILMS</span><span class="star">✳</span>
-        <span>CINEMATOGRAPHY</span><span class="star">✳</span>
-        <span>VIDEO EDITING</span><span class="star">✳</span>
-        <span>VISUAL STORYTELLING</span><span class="star">✳</span>
-        <span>BRAND FILMS</span><span class="star">✳</span>
-      </div>
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">MAVSI<span>.</span> THE CREATOR</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#work">Selected Work</a>
+      <a href="#story">My Story</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </div>
-    <!-- PORTFOLIO -->
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="eyebrow">01 / THE PORTFOLIO</span>
-            <h2>SELECTED<br>VISUALS<span style="color:var(--accent)">.</span></h2>
-          </div>
-          <p>
-            Every project begins with an idea. Every frame is an
-            opportunity to tell a story worth remembering.
-          </p>
-        </div>
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <a href="#contact" aria-label="Ask about cinematic films">
-              <div class="work-image">
-                <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85"
-                     alt="Camera equipment prepared for a cinematic film shoot"
-                     loading="lazy">
-              </div>
-              <div class="work-meta">
-                <h3>Cinematic Films</h3>
-                <span>01 / FILM</span>
-              </div>
-              <p class="work-note">Visual storytelling with atmosphere, movement and emotion.</p>
-            </a>
-          </article>
-          <article class="work-card reveal">
-            <a href="#contact" aria-label="Ask about event cinematography">
-              <div class="work-image">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
-                     alt="Wedding celebration and event details"
-                     loading="lazy">
-              </div>
-              <div class="work-meta">
-                <h3>Weddings & Events</h3>
-                <span>02 / EVENTS</span>
-              </div>
-              <p class="work-note">Real moments captured with care and cinematic detail.</p>
-            </a>
-          </article>
-          <article class="work-card reveal">
-            <a href="#contact" aria-label="Ask about brand video production">
-              <div class="work-image">
-                <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1000&q=85"
-                     alt="Video production equipment on a creative set"
-                     loading="lazy">
-              </div>
-              <div class="work-meta">
-                <h3>Brand Commercials</h3>
-                <span>03 / BRANDS</span>
-              </div>
-              <p class="work-note">Creative visuals designed to help brands communicate their message.</p>
-            </a>
-          </article>
-          <article class="work-card reveal">
-            <a href="#contact" aria-label="Ask about street cinematography">
-              <div class="work-image">
-                <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=85"
-                     alt="Cinematic city street at night"
-                     loading="lazy">
-              </div>
-              <div class="work-meta">
-                <h3>Street Visuals</h3>
-                <span>04 / STREET</span>
-              </div>
-              <p class="work-note">Everyday places transformed into expressive visual stories.</p>
-            </a>
-          </article>
-        </div>
-        <div class="portfolio-note reveal">
-          <strong style="color:var(--text)">Portfolio update:</strong>
-          These are sample images for the website design, not proof of completed
-          client projects. Replace them with your own videos and finished work
-          before presenting this section as your professional portfolio.
-        </div>
-      </div>
-    </section>
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-visual reveal">
-          <div class="about-stamp">MAVSI THE CREATOR<br>VISION IN EVERY FRAME.</div>
-        </div>
-        <div class="about-text reveal">
-          <span class="eyebrow">02 / THE CREATOR</span>
-          <h2>MORE THAN<br>JUST <span>VISUALS.</span></h2>
-          <p>
-            I’m Mavsi The Creator, a visual storyteller passionate about
-            cinematography, editing and creating videos that make people feel
-            something.
-          </p>
-          <p>
-            My journey connects Lagos, where I was born, with Onitsha in
-            Anambra State, where I relocated in 2019. My roots are in
-            Aniocha North, Delta State. These experiences continue to shape
-            how I see people, places and stories.
-          </p>
-          <p>
-            From street cinematography to weddings, church productions and
-            brand videos, my goal is to keep learning, create with purpose
-            and bring every idea to life one frame at a time.
-          </p>
-          <div class="facts">
-            <div class="fact">
-              <strong>STORY FIRST</strong>
-              <span>Purpose behind every frame</span>
-            </div>
-            <div class="fact">
-              <strong>DETAIL MATTERS</strong>
-              <span>Thoughtful editing and visuals</span>
-            </div>
-            <div class="fact">
-              <strong>CAPCUT</strong>
-              <span>Primary editing tool</span>
-            </div>
-            <div class="fact">
-              <strong>ALWAYS CREATING</strong>
-              <span>Learning and improving</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- SERVICES -->
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="eyebrow">03 / WHAT I DO</span>
-            <h2>BUILT AROUND<br>YOUR <span style="color:var(--accent)">VISION.</span></h2>
-          </div>
-          <p>
-            Whether you have a complete concept or just an idea,
-            let's work together to create something meaningful.
-          </p>
-        </div>
-        <div class="service-list">
-          <article class="service reveal">
-            <span class="service-number">01</span>
-            <div>
-              <h3>Cinematography</h3>
-              <p>Visual coverage for creative projects, streets, events and stories.</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </article>
-          <article class="service reveal">
-            <span class="service-number">02</span>
-            <div>
-              <h3>Video Editing</h3>
-              <p>Thoughtful cuts, pacing, transitions, sound and cinematic colour.</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </article>
-          <article class="service reveal">
-            <span class="service-number">03</span>
-            <div>
-              <h3>Weddings & Events</h3>
-              <p>Capturing the atmosphere and meaningful moments of special occasions.</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </article>
-          <article class="service reveal">
-            <span class="service-number">04</span>
-            <div>
-              <h3>Brand & Social Videos</h3>
-              <p>Short-form visuals, promotional edits and creative content for brands.</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </article>
-          <article class="service reveal">
-            <span class="service-number">05</span>
-            <div>
-              <h3>Church & Event Media</h3>
-              <p>Video coverage and edits for church programmes and community events.</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-box reveal">
-          <span class="eyebrow">04 / HAVE A PROJECT IN MIND?</span>
-          <h2>LET'S MAKE<br>IT <span style="color:#fff">CINEMATIC.</span></h2>
-          <p>
-            Have a video idea, event, brand or creative project?
-            Reach out and let's discuss how we can bring your vision to life.
-          </p>
-          <div class="contact-actions">
-            <a class="button dark-button"
-               href="https://wa.me/2347026906976"
-               target="_blank"
-               rel="noopener noreferrer">
-              CHAT ON WHATSAPP ↗
-            </a>
-            <a class="button outline-button"
-               href="mailto:emmanuelchigozirim345@gmail.com">
-              SEND AN EMAIL ↗
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
+    <a href="#contact" class="nav-contact">LET'S CREATE ↗</a>
+  </div>
+</nav>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">Filmmaker · Video Editor · Visual Storyteller</div>
+    <h1>MAKING<br>FEELING<br><span>VISIBLE.</span></h1>
+    <p>
+      I'm Mavsi The Creator. I turn everyday moments, real stories
+      and meaningful messages into cinematic visuals people can feel.
+    </p>
+    <div class="buttons">
+      <a href="#work" class="btn btn-primary">EXPLORE MY WORK ↘</a>
+      <a href="#story" class="btn">DISCOVER MY STORY</a>
+    </div>
+  </div>
+</section>
+<div class="marquee">
+  CINEMATOGRAPHY <span>✳</span> STORYTELLING <span>✳</span>
+  VIDEO EDITING <span>✳</span> FAITH <span>✳</span>
+  CULTURE <span>✳</span> HUMAN STORIES <span>✳</span>
+</div>
+<section class="content-section" id="work">
+  <div class="container">
+    <div class="section-heading reveal">
       <div>
-        <a class="logo" href="#home">MAVSI<span>.</span> THE CREATOR</a>
-        <p class="footer-copy">Independent visual creator · Nigeria</p>
-        <p class="footer-copy">© <span id="year"></span> Mavsi The Creator. All rights reserved.</p>
+        <div class="eyebrow">A few stories I've told</div>
+        <h2>SELECTED <span class="accent">WORK.</span></h2>
       </div>
-      <div class="socials">
-        <a href="https://www.instagram.com/heismavsi/"
-           target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-        <a href="https://www.tiktok.com/@heismavsi"
-           target="_blank" rel="noopener noreferrer">TIKTOK ↗</a>
-        <a href="https://www.youtube.com/@heismavsi"
-           target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a>
+      <p>
+        Short films, visual experiments and meaningful moments captured
+        through my lens. Tap play to watch each project.
+      </p>
+    </div>
+    <div class="category-list reveal">
+      <span>Short Films</span>
+      <span>Church & Faith</span>
+      <span>Street Visuals</span>
+      <span>Voice & Typography</span>
+      <span>Storytelling</span>
+    </div>
+    <div class="portfolio-grid">
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/h-fLEK573Ww" title="One Call Away" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>ONE CALL AWAY</h3><p>Short Film · Human Story</p></div>
+          <span class="project-number">01 / 07</span>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/b65wXJ8XGA4" title="A Busy Day" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>A BUSY DAY</h3><p>Everyday Life · Visual Story</p></div>
+          <span class="project-number">02 / 07</span>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/uZqR9ejMsBs" title="Church Recap" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>CHURCH RECAP</h3><p>Faith · Event Coverage</p></div>
+          <span class="project-number">03 / 07</span>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/iZ2KOeNxWb0" title="Giants of Africa" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>GIANTS OF AFRICA</h3><p>Voice-led Visual · Identity</p></div>
+          <span class="project-number">04 / 07</span>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/06pJkJacc64" title="Life After Graduation" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>LIFE AFTER GRADUATION</h3><p>Storytelling · Real Life</p></div>
+          <span class="project-number">05 / 07</span>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/_fMsyPlrElA" title="Peace" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>PEACE</h3><p>Mood Film · Visual Expression</p></div>
+          <span class="project-number">06 / 07</span>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/HqwCa_MjNCM" title="Ranting" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="project-info">
+          <div><h3>RANTING</h3><p>Voice · Editing Experiment</p></div>
+          <span class="project-number">07 / 07</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="story-section" id="story">
+  <div class="container story-grid">
+    <div class="story-title reveal">
+      <div class="eyebrow">Behind the name</div>
+      <h2>THE STORY<br>OF <span style="color:#71821b">MAVSI.</span></h2>
+      <p>Different places. One growing vision. A desire to tell stories that matter.</p>
+    </div>
+    <div class="story-copy reveal">
+      <p class="lead">
+        “I’m not just trying to make videos look good.
+        I want every frame to make people feel something.”
+      </p>
+      <p>
+        My journey is shaped by the places I’ve called home and the
+        experiences that have influenced how I see the world. I was born
+        in Lagos, and in 2019 I relocated to Onitsha, Anambra State.
+      </p>
+      <p>
+        My roots also connect to Aniocha North in Delta State. Moving
+        through different places has helped shape my perspective, my
+        creativity and the stories I want to tell.
+      </p>
+      <p>
+        I’m building my craft through cinematography, editing and visual
+        storytelling—creating short films, church recaps, street visuals
+        and content for brands. Every project is another chance to learn,
+        improve and make something meaningful.
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>01 / Lagos</strong>
+          <span>Where my story began.</span>
+        </div>
+        <div class="timeline-item">
+          <strong>02 / 2019</strong>
+          <span>Relocated to Onitsha, Anambra State—a new chapter and perspective.</span>
+        </div>
+        <div class="timeline-item">
+          <strong>03 / Roots</strong>
+          <span>Aniocha North, Delta State—a part of my story and identity.</span>
+        </div>
+        <div class="timeline-item">
+          <strong>04 / Today</strong>
+          <span>Growing as Mavsi The Creator, one project and one frame at a time.</span>
+        </div>
       </div>
     </div>
-  </footer>
-  <script>
-    // Mobile navigation
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute("aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu");
-      menuToggle.textContent = isOpen ? "×" : "☰";
-    });
-    // Close the menu after selecting a section
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
-        menuToggle.textContent = "☰";
-      });
-    });
-    // Reveal sections as they enter the screen
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12
-    });
-    document.querySelectorAll(".reveal").forEach(element => {
-      revealObserver.observe(element);
-    });
-    // Automatic footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </div>
+</section>
+<section class="content-section" id="services">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div>
+        <div class="eyebrow">What I can create</div>
+        <h2>BUILT AROUND<br><span class="accent">YOUR STORY.</span></h2>
+      </div>
+      <p>
+        From a real-life moment to a polished brand visual, the goal is
+        always clear: tell the story with intention.
+      </p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service">
+        <span class="number">01 / FILM</span>
+        <h3>Cinematography</h3>
+        <p>Street visuals, cinematic scenes and carefully framed moments.</p>
+      </div>
+      <div class="service">
+        <span class="number">02 / EDIT</span>
+        <h3>Video Editing</h3>
+        <p>Pacing, transitions, sound, colour and visual rhythm.</p>
+      </div>
+      <div class="service">
+        <span class="number">03 / EVENTS</span>
+        <h3>Church & Events</h3>
+        <p>Recaps that preserve the atmosphere, energy and emotion.</p>
+      </div>
+      <div class="service">
+        <span class="number">04 / BRANDS</span>
+        <h3>Creative Content</h3>
+        <p>Short-form visuals and promotional edits for people and brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content-section contact-section" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Have a story in mind?</div>
+      <h2 class="contact-title">LET'S MAKE<br><span class="accent">IT REAL.</span></h2>
+      <p class="contact-description">
+        Have a film, event, church recap or creative idea in mind?
+        Reach out and let's talk about what we can create together.
+      </p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:emmanuelchigozirim345@gmail.com">
+          <span><small>Email</small><strong>emmanuelchigozirim345@gmail.com</strong></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://wa.me/2347026906976" target="_blank" rel="noopener">
+          <span><small>WhatsApp</small><strong>0702 690 6976</strong></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://www.youtube.com/@heismavsi" target="_blank" rel="noopener">
+          <span><small>YouTube</small><strong>Watch more videos</strong></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/heismavsi/" target="_blank" rel="noopener">
+          <span><small>Instagram</small><strong>@heismavsi</strong></span>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://www.tiktok.com/@heismavsi" target="_blank" rel="noopener">
+          <span><small>TikTok</small><strong>@heismavsi</strong></span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div>
+        <div class="eyebrow">Mavsi The Creator</div>
+        <h3>Every frame has a purpose.<br><span class="accent">Every story deserves to be seen.</span></h3>
+        <p>Independent creative. Learning, building and telling stories through moving images.</p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/2347026906976" target="_blank" rel="noopener">START A CONVERSATION ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Mavsi The Creator. All rights reserved.</span>
+    <span>Made with vision, patience & purpose.</span>
+    <a href="#home">BACK TO TOP ↑</a>
+  </div>
+</footer>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+menuBtn.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.textContent = open ? "✕" : "☰";
+});
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰";
+  });
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+</script>
 </body>
-</html>
+</html></html>
