@@ -1,76 +1,593 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mavsi | The Creator — Nigerian Cinematographer & Visual Storyteller</title>
-  <meta name="description" content="Mavsi | The Creator — Emmanuel Chigozirim, Nigerian cinematographer and visual storyteller. Cinematic stories, visuals and quotes.">
-  <meta name="author" content="Emmanuel Chigozirim">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Mavsi | The Creator">
-  <meta property="og:description" content="Nigerian Cinematographer & Visual Storyteller — Cinematic Stories • Visuals • Quotes">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#050505">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mavsi The Creator | Cinematic Visuals</title>
+
+  <meta name="description" content="Mavsi The Creator — filmmaker, cinematographer, video editor and visual storyteller based in Nigeria.">
+
+  <meta name="theme-color" content="#722F37">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfilePage",
-    "mainEntity":{
-      "@type":"Person",
-      "name":"Emmanuel Chigozirim",
-      "alternateName":["Mavsi","Mavsi | The Creator","@heismavsi"],
-      "description":"Nigerian Cinematographer & Visual Storyteller. Cinematic Stories • Visuals • Quotes",
-      "sameAs":["https://www.instagram.com/heismavsi/","https://www.tiktok.com/@heismavsi"]
-    }
-  }
-  </script>
 </head>
+
 <body>
-  <header class="nav">
-    <a class="brand" href="#top">MAVSI<span>THE CREATOR</span></a>
-    <nav><a href="#work">Work</a><a href="#about">About</a><a href="#connect">Connect</a></nav>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-content">
-        <p class="eyebrow">EMMANUEL CHIGOZIRIM</p>
-        <h1>Mavsi<br><i>The Creator</i></h1>
-        <p class="role">Nigerian Cinematographer & Visual Storyteller</p>
-        <p class="tagline">Cinematic Stories • Visuals • Quotes</p>
-        <a class="button" href="#work">WATCH THE WORK <span>↓</span></a>
+<header class="header">
+  <nav class="nav container">
+
+    <a href="#home" class="brand">
+      MAVSI.
+      <small>THE CREATOR</small>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Films</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-contact">LET'S TALK ↗</a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div class="hero-copy reveal">
+
+          <div class="eyebrow">
+            The Art of Visual Storytelling
+          </div>
+
+          <h1>
+            I CREATE<br>
+            <span class="serif">what you</span><br>
+            FEEL.
+          </h1>
+
+          <p class="hero-description">
+            I'm Mavsi The Creator — a filmmaker, cinematographer
+            and visual storyteller turning ordinary moments
+            into extraordinary experiences.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#portfolio" class="button button-primary">
+              WATCH MY WORK ↗
+            </a>
+
+            <a href="#about" class="button button-text">
+              GET TO KNOW ME
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-video-wrap reveal">
+
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            preload="metadata">
+
+            <source
+              src="15191691_3840_2160_30fps.mp4"
+              type="video/mp4">
+
+            Your browser does not support HTML video.
+
+          </video>
+
+          <div class="video-caption">
+            Every frame has a story.
+          </div>
+
+          <div class="hero-stamp">
+            VISUAL<br>ARTIST
+          </div>
+
+        </div>
+
       </div>
-      <div class="scroll">SCROLL</div>
-    </section>
 
-    <section id="work" class="section work">
-      <div class="section-head"><p class="eyebrow">SELECTED WORK</p><h2>Stories in motion.</h2></div>
+      <div class="hero-bottom">
+        <span>Filmmaking / Cinematography</span>
+        <span>Made in Nigeria 🇳🇬</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INTRODUCTION -->
+
+  <section class="intro">
+
+    <div class="container intro-grid reveal">
+
+      <div class="intro-label">My Philosophy</div>
+
+      <h2 class="serif">
+        A camera captures an image.
+        A storyteller captures a feeling.
+        I want every frame to leave
+        <span>something unforgettable.</span>
+      </h2>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO PORTFOLIO -->
+
+  <section class="portfolio" id="portfolio">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div>
+
+          <div class="section-label">
+            Selected Creations / 01—05
+          </div>
+
+          <h2 class="section-title">
+            My work.<br>
+            <span class="accent">My perspective.</span>
+          </h2>
+
+        </div>
+
+        <p class="section-description">
+          Explore my cinematic work, creative projects
+          and visual storytelling. Select any video
+          to play it directly on this page.
+        </p>
+
+      </div>
+
       <div class="video-grid">
-        <article class="video-card"><div class="video-placeholder"><span>01</span><strong>YOUR CINEMATIC VIDEO</strong><small>Replace this card with your first video.</small></div></article>
-        <article class="video-card"><div class="video-placeholder"><span>02</span><strong>YOUR CINEMATIC VIDEO</strong><small>Replace this card with your second video.</small></div></article>
-        <article class="video-card"><div class="video-placeholder"><span>03</span><strong>YOUR CINEMATIC VIDEO</strong><small>Replace this card with your third video.</small></div></article>
+
+        <!-- VIDEO 1 -->
+
+        <article class="video-card reveal">
+
+          <div class="video-frame">
+
+            <video controls playsinline preload="metadata">
+              <source
+                src="15191691_3840_2160_30fps.mp4"
+                type="video/mp4">
+            </video>
+
+          </div>
+
+          <div class="video-details">
+
+            <div>
+              <div class="video-category">
+                01 / Cinematography
+              </div>
+
+              <h3>Visual Story 01</h3>
+
+              <p>A cinematic moment captured through my lens.</p>
+            </div>
+
+            <span class="video-index">01</span>
+
+          </div>
+
+        </article>
+
+        <!-- VIDEO 2 -->
+
+        <article class="video-card reveal">
+
+          <div class="video-frame">
+
+            <video controls playsinline preload="metadata">
+              <source
+                src="12877080_3840_2160_30fps.mp4"
+                type="video/mp4">
+            </video>
+
+          </div>
+
+          <div class="video-details">
+
+            <div>
+              <div class="video-category">
+                02 / Cinematography
+              </div>
+
+              <h3>Visual Story 02</h3>
+
+              <p>Another perspective from my video collection.</p>
+            </div>
+
+            <span class="video-index">02</span>
+
+          </div>
+
+        </article>
+
+        <!-- VIDEO 3 -->
+
+        <article class="video-card reveal">
+
+          <div class="video-frame">
+
+            <video controls playsinline preload="metadata">
+              <source
+                src="11961254_1920_1080_100fps.mp4"
+                type="video/mp4">
+            </video>
+
+          </div>
+
+          <div class="video-details">
+
+            <div>
+              <div class="video-category">
+                03 / Slow Motion
+              </div>
+
+              <h3>Visual Story 03</h3>
+
+              <p>Details, movement and atmosphere.</p>
+            </div>
+
+            <span class="video-index">03</span>
+
+          </div>
+
+        </article>
+
+        <!-- VIDEO 4 -->
+
+        <article class="video-card reveal">
+
+          <div class="video-frame">
+
+            <video controls playsinline preload="metadata">
+              <source
+                src="12297180_1920_1080_50fps.mp4"
+                type="video/mp4">
+            </video>
+
+          </div>
+
+          <div class="video-details">
+
+            <div>
+              <div class="video-category">
+                04 / Film
+              </div>
+
+              <h3>Visual Story 04</h3>
+
+              <p>Creative footage from my portfolio.</p>
+            </div>
+
+            <span class="video-index">04</span>
+
+          </div>
+
+        </article>
+
+        <!-- VIDEO 5 -->
+
+        <article class="video-card reveal">
+
+          <div class="video-frame">
+
+            <video controls playsinline preload="metadata">
+              <source
+                src="12087892_3840_2160_25fps.mp4"
+                type="video/mp4">
+            </video>
+
+          </div>
+
+          <div class="video-details">
+
+            <div>
+              <div class="video-category">
+                05 / Cinematic Visuals
+              </div>
+
+              <h3>Visual Story 05</h3>
+
+              <p>A final selection from my video portfolio.</p>
+            </div>
+
+            <span class="video-index">05</span>
+
+          </div>
+
+        </article>
+
       </div>
-      <p class="note">Your actual videos can be placed in the <code>media</code> folder and connected here. I left the structure ready so the site can stay lightweight and free.</p>
-    </section>
 
-    <section id="about" class="section about">
-      <div><p class="eyebrow">ABOUT MAVSI</p><h2>Every frame has a feeling.</h2></div>
-      <div class="about-copy"><p>Mavsi is the creator identity of Emmanuel Chigozirim, a Nigerian cinematographer and visual storyteller focused on cinematic stories, visuals and quote-driven moments.</p><p>This space is a home for the work — built to be simple, cinematic and easy to discover.</p></div>
-    </section>
+    </div>
 
-    <section id="connect" class="section connect">
-      <p class="eyebrow">FIND MAVSI</p>
-      <h2>@heismavsi</h2>
-      <div class="socials">
-        <a href="https://www.instagram.com/heismavsi/" target="_blank" rel="noopener">Instagram ↗</a>
-        <a href="https://www.tiktok.com/@heismavsi" target="_blank" rel="noopener">TikTok ↗</a>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="container about-grid">
+
+      <div class="about-reel reveal">
+
+        <video controls playsinline preload="metadata">
+
+          <source
+            src="12877080_3840_2160_30fps.mp4"
+            type="video/mp4">
+
+        </video>
+
       </div>
-    </section>
-  </main>
 
-  <footer><span>© <span id="year"></span> Mavsi | The Creator</span><span>Emmanuel Chigozirim • Nigeria</span></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+      <div class="about-copy reveal">
+
+        <div class="section-label">
+          The Person Behind the Lens
+        </div>
+
+        <h2 class="section-title">
+          Meet the mind<br>
+          behind the <span class="accent">magic.</span>
+        </h2>
+
+        <p>
+          I'm Mavsi The Creator, a filmmaker and content
+          creator passionate about visual storytelling.
+        </p>
+
+        <p>
+          From cinematography and video editing to motion
+          graphics and short films, I love using visuals
+          to communicate emotions and tell stories people remember.
+        </p>
+
+        <p>
+          Every project is an opportunity to grow,
+          experiment and create something meaningful.
+        </p>
+
+        <a href="#contact" class="button button-primary">
+          LET'S CREATE TOGETHER ↗
+        </a>
+
+        <div class="signature">
+          Mavsi The Creator.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div>
+
+          <div class="section-label">What I Do</div>
+
+          <h2 class="section-title">
+            Creativity with<br>
+            <span class="service-highlight">a purpose.</span>
+          </h2>
+
+        </div>
+
+        <p class="section-description">
+          Visual services to help turn ideas into
+          compelling stories.
+        </p>
+
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service reveal">
+
+          <div class="service-number">
+            01 / VISUAL PRODUCTION
+          </div>
+
+          <h3>Cinematography</h3>
+
+          <p>
+            Cinematic visuals for events, weddings,
+            creative projects and everyday stories.
+          </p>
+
+        </article>
+
+        <article class="service reveal">
+
+          <div class="service-number">
+            02 / POST-PRODUCTION
+          </div>
+
+          <h3>Video Editing</h3>
+
+          <p>
+            Story-driven editing, colour grading,
+            sound synchronisation and transitions.
+          </p>
+
+        </article>
+
+        <article class="service reveal">
+
+          <div class="service-number">
+            03 / DIGITAL ART
+          </div>
+
+          <h3>Motion Graphics</h3>
+
+          <p>
+            Typography animation, creative titles
+            and motion design for digital content.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="container reveal">
+
+      <div class="section-label contact-label">
+        The Beginning of Something Great
+      </div>
+
+      <h2 class="section-title serif">
+        Have a story?<br>
+        <span>Let's tell it.</span>
+      </h2>
+
+      <p class="section-description">
+        Have a project in mind or want to collaborate?
+        Let's talk about what we can create together.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a
+          href="https://wa.me/2347026906976"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button-primary">
+
+          CONTACT ME ON WHATSAPP ↗
+
+        </a>
+
+        <a
+          href="mailto:emmanuelchigozirim345@gmail.com"
+          class="button contact-secondary">
+
+          SEND AN EMAIL ↗
+
+        </a>
+
+      </div>
+
+      <p class="social-text">
+        FOLLOW MY CREATIVE JOURNEY:
+
+        <a
+          href="https://www.instagram.com/heismavsi/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          @HEISMAVSI ↗
+
+        </a>
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-content">
+
+    <a href="#home" class="footer-brand">
+      MAVSI.
+      <span>THE CREATOR</span>
+    </a>
+
+    <p>
+      © <span id="year"></span>
+      Mavsi The Creator. All rights reserved.
+    </p>
+
+    <div class="footer-socials">
+
+      <a
+        href="https://www.instagram.com/heismavsi/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        INSTAGRAM ↗
+
+      </a>
+
+      <a
+        href="https://wa.me/2347026906976"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        WHATSAPP ↗
+
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="script.js" defer></script>
+
 </body>
 </html>
