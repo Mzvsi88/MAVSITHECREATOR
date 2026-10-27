@@ -1,593 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
 
-  <title>Mavsi The Creator | Cinematic Visuals</title>
+<title>Mavsi The Creator | Cinematic Visuals</title>
+<meta name="description" content="Mavsi The Creator — filmmaker, cinematographer, video editor and visual storyteller.">
 
-  <meta name="description" content="Mavsi The Creator — filmmaker, cinematographer, video editor and visual storyteller based in Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <meta name="theme-color" content="#722F37">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 
 <body>
 
 <header class="header">
   <nav class="nav container">
-
     <a href="#home" class="brand">
-      MAVSI.
+      MAVSI<span>.</span>
       <small>THE CREATOR</small>
     </a>
 
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open menu" aria-expanded="false">☰</button>
+
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#portfolio">Films</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#portfolio">WORK</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#contact">CONTACT</a></li>
     </ul>
 
-    <a href="#contact" class="nav-contact">LET'S TALK ↗</a>
-
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="navLinks">☰</button>
-
+    <a class="nav-cta" href="#contact">LET'S TALK ↗</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- HERO SECTION -->
+  <!-- CINEMATIC HERO -->
 
   <section class="hero" id="home">
 
-    <div class="container">
+    <video class="hero-bg" autoplay muted loop playsinline
+      webkit-playsinline preload="metadata">
+      <source src="15191691_3840_2160_30fps.mp4" type="video/mp4">
+    </video>
 
-      <div class="hero-grid">
+    <div class="hero-overlay"></div>
 
-        <div class="hero-copy reveal">
+    <div class="container hero-content reveal">
+      <p class="eyebrow">FILMMAKER / CINEMATOGRAPHER / VISUAL STORYTELLER</p>
 
-          <div class="eyebrow">
-            The Art of Visual Storytelling
-          </div>
+      <h1>MAVSI<span>.</span></h1>
 
-          <h1>
-            I CREATE<br>
-            <span class="serif">what you</span><br>
-            FEEL.
-          </h1>
+      <h2 class="hero-subtitle">THE CREATOR</h2>
 
-          <p class="hero-description">
-            I'm Mavsi The Creator — a filmmaker, cinematographer
-            and visual storyteller turning ordinary moments
-            into extraordinary experiences.
-          </p>
+      <p class="hero-description">
+        Turning real moments into unforgettable stories
+        through the power of visual storytelling.
+      </p>
 
-          <div class="hero-buttons">
+      <div class="hero-actions">
+        <a href="#portfolio" class="button button-red">
+          ▶ &nbsp; ENTER MY WORLD
+        </a>
 
-            <a href="#portfolio" class="button button-primary">
-              WATCH MY WORK ↗
-            </a>
-
-            <a href="#about" class="button button-text">
-              GET TO KNOW ME
-            </a>
-
-          </div>
-
-        </div>
-
-        <div class="hero-video-wrap reveal">
-
-          <video
-            class="hero-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls
-            preload="metadata">
-
-            <source
-              src="15191691_3840_2160_30fps.mp4"
-              type="video/mp4">
-
-            Your browser does not support HTML video.
-
-          </video>
-
-          <div class="video-caption">
-            Every frame has a story.
-          </div>
-
-          <div class="hero-stamp">
-            VISUAL<br>ARTIST
-          </div>
-
-        </div>
-
+        <a href="#about" class="button button-outline">
+          DISCOVER MY STORY ↗
+        </a>
       </div>
-
-      <div class="hero-bottom">
-        <span>Filmmaking / Cinematography</span>
-        <span>Made in Nigeria 🇳🇬</span>
-      </div>
-
     </div>
 
+    <div class="hero-side">
+      <span>01</span>
+      <span>05</span>
+      <span>VISUAL STORIES</span>
+    </div>
+
+    <div class="scroll-indicator">SCROLL TO EXPLORE ↓</div>
   </section>
 
   <!-- INTRODUCTION -->
 
-  <section class="intro">
+  <section class="statement section-pad">
+    <div class="container reveal">
+      <p class="eyebrow">MY CREATIVE PHILOSOPHY</p>
 
-    <div class="container intro-grid reveal">
-
-      <div class="intro-label">My Philosophy</div>
-
-      <h2 class="serif">
-        A camera captures an image.
-        A storyteller captures a feeling.
-        I want every frame to leave
-        <span>something unforgettable.</span>
+      <h2>
+        I DON'T JUST SHOOT VIDEOS.
+        <span>I CREATE FEELINGS.</span>
       </h2>
 
+      <p class="muted">
+        Every frame has a purpose. Every story deserves to be seen.
+      </p>
     </div>
+  </section>
 
+  <!-- FEATURED FILM -->
+
+  <section class="featured" id="featured">
+
+    <video class="featured-video autoplay-video" autoplay muted loop
+      playsinline webkit-playsinline preload="metadata">
+      <source src="12877080_3840_2160_30fps.mp4" type="video/mp4">
+    </video>
+
+    <div class="featured-overlay"></div>
+
+    <div class="container featured-content reveal">
+      <p class="eyebrow">FEATURED VISUAL / 001</p>
+      <h2>BEYOND<br>THE FRAME.</h2>
+      <p>
+        Cinematic visuals. Powerful emotions.
+        Stories that stay with you.
+      </p>
+      <a href="#portfolio" class="button button-red">EXPLORE MY WORK ↗</a>
+    </div>
   </section>
 
   <!-- VIDEO PORTFOLIO -->
 
-  <section class="portfolio" id="portfolio">
+  <section class="portfolio section-pad" id="portfolio">
 
     <div class="container">
 
       <div class="section-heading reveal">
-
         <div>
-
-          <div class="section-label">
-            Selected Creations / 01—05
-          </div>
-
-          <h2 class="section-title">
-            My work.<br>
-            <span class="accent">My perspective.</span>
-          </h2>
-
+          <p class="eyebrow">A COLLECTION OF VISUAL STORIES</p>
+          <h2>SELECTED <span>WORKS.</span></h2>
         </div>
 
-        <p class="section-description">
-          Explore my cinematic work, creative projects
-          and visual storytelling. Select any video
-          to play it directly on this page.
+        <p class="muted">
+          Five visual experiences. One creative vision.
+          Welcome to my world.
         </p>
-
       </div>
 
       <div class="video-grid">
 
-        <!-- VIDEO 1 -->
-
         <article class="video-card reveal">
-
           <div class="video-frame">
-
-            <video controls playsinline preload="metadata">
-              <source
-                src="15191691_3840_2160_30fps.mp4"
-                type="video/mp4">
+            <video class="autoplay-video" autoplay muted loop playsinline
+              webkit-playsinline preload="metadata"
+              controls aria-label="Cinematic video one">
+              <source src="15191691_3840_2160_30fps.mp4" type="video/mp4">
             </video>
-
+            <span class="video-number">01</span>
           </div>
-
-          <div class="video-details">
-
+          <div class="video-info">
             <div>
-              <div class="video-category">
-                01 / Cinematography
-              </div>
-
-              <h3>Visual Story 01</h3>
-
-              <p>A cinematic moment captured through my lens.</p>
+              <p class="eyebrow">CINEMATOGRAPHY</p>
+              <h3>Visual Story One</h3>
             </div>
-
-            <span class="video-index">01</span>
-
+            <span class="arrow">↗</span>
           </div>
-
         </article>
 
-        <!-- VIDEO 2 -->
-
         <article class="video-card reveal">
-
           <div class="video-frame">
-
-            <video controls playsinline preload="metadata">
-              <source
-                src="12877080_3840_2160_30fps.mp4"
-                type="video/mp4">
+            <video class="autoplay-video" autoplay muted loop playsinline
+              webkit-playsinline preload="metadata"
+              controls aria-label="Cinematic video two">
+              <source src="12877080_3840_2160_30fps.mp4" type="video/mp4">
             </video>
-
+            <span class="video-number">02</span>
           </div>
-
-          <div class="video-details">
-
+          <div class="video-info">
             <div>
-              <div class="video-category">
-                02 / Cinematography
-              </div>
-
-              <h3>Visual Story 02</h3>
-
-              <p>Another perspective from my video collection.</p>
+              <p class="eyebrow">VISUAL STORYTELLING</p>
+              <h3>Visual Story Two</h3>
             </div>
-
-            <span class="video-index">02</span>
-
+            <span class="arrow">↗</span>
           </div>
-
         </article>
 
-        <!-- VIDEO 3 -->
-
         <article class="video-card reveal">
-
           <div class="video-frame">
-
-            <video controls playsinline preload="metadata">
-              <source
-                src="11961254_1920_1080_100fps.mp4"
-                type="video/mp4">
+            <video class="autoplay-video" autoplay muted loop playsinline
+              webkit-playsinline preload="metadata"
+              controls aria-label="Cinematic video three">
+              <source src="11961254_1920_1080_100fps.mp4" type="video/mp4">
             </video>
-
+            <span class="video-number">03</span>
           </div>
-
-          <div class="video-details">
-
+          <div class="video-info">
             <div>
-              <div class="video-category">
-                03 / Slow Motion
-              </div>
-
-              <h3>Visual Story 03</h3>
-
-              <p>Details, movement and atmosphere.</p>
+              <p class="eyebrow">SLOW MOTION</p>
+              <h3>Visual Story Three</h3>
             </div>
-
-            <span class="video-index">03</span>
-
+            <span class="arrow">↗</span>
           </div>
-
         </article>
 
-        <!-- VIDEO 4 -->
-
         <article class="video-card reveal">
-
           <div class="video-frame">
-
-            <video controls playsinline preload="metadata">
-              <source
-                src="12297180_1920_1080_50fps.mp4"
-                type="video/mp4">
+            <video class="autoplay-video" autoplay muted loop playsinline
+              webkit-playsinline preload="metadata"
+              controls aria-label="Cinematic video four">
+              <source src="12297180_1920_1080_50fps.mp4" type="video/mp4">
             </video>
-
+            <span class="video-number">04</span>
           </div>
-
-          <div class="video-details">
-
+          <div class="video-info">
             <div>
-              <div class="video-category">
-                04 / Film
-              </div>
-
-              <h3>Visual Story 04</h3>
-
-              <p>Creative footage from my portfolio.</p>
+              <p class="eyebrow">CREATIVE FILM</p>
+              <h3>Visual Story Four</h3>
             </div>
-
-            <span class="video-index">04</span>
-
+            <span class="arrow">↗</span>
           </div>
-
         </article>
 
-        <!-- VIDEO 5 -->
-
         <article class="video-card reveal">
-
           <div class="video-frame">
-
-            <video controls playsinline preload="metadata">
-              <source
-                src="12087892_3840_2160_25fps.mp4"
-                type="video/mp4">
+            <video class="autoplay-video" autoplay muted loop playsinline
+              webkit-playsinline preload="metadata"
+              controls aria-label="Cinematic video five">
+              <source src="12087892_3840_2160_25fps.mp4" type="video/mp4">
             </video>
-
+            <span class="video-number">05</span>
           </div>
-
-          <div class="video-details">
-
+          <div class="video-info">
             <div>
-              <div class="video-category">
-                05 / Cinematic Visuals
-              </div>
-
-              <h3>Visual Story 05</h3>
-
-              <p>A final selection from my video portfolio.</p>
+              <p class="eyebrow">CINEMATIC VISUALS</p>
+              <h3>Visual Story Five</h3>
             </div>
-
-            <span class="video-index">05</span>
-
+            <span class="arrow">↗</span>
           </div>
-
         </article>
 
       </div>
-
     </div>
-
   </section>
 
   <!-- ABOUT -->
 
-  <section class="about" id="about">
-
+  <section class="about section-pad" id="about">
     <div class="container about-grid">
 
-      <div class="about-reel reveal">
-
-        <video controls playsinline preload="metadata">
-
-          <source
-            src="12877080_3840_2160_30fps.mp4"
-            type="video/mp4">
-
+      <div class="about-visual reveal">
+        <video class="autoplay-video" autoplay muted loop playsinline
+          webkit-playsinline preload="metadata"
+          controls aria-label="Behind the lens">
+          <source src="12877080_3840_2160_30fps.mp4" type="video/mp4">
         </video>
-
+        <span class="about-label">BEHIND THE LENS / MAVSI</span>
       </div>
 
       <div class="about-copy reveal">
+        <p class="eyebrow">THE PERSON BEHIND THE CAMERA</p>
 
-        <div class="section-label">
-          The Person Behind the Lens
-        </div>
-
-        <h2 class="section-title">
-          Meet the mind<br>
-          behind the <span class="accent">magic.</span>
-        </h2>
+        <h2>THE MIND<br>BEHIND THE <span>LENS.</span></h2>
 
         <p>
-          I'm Mavsi The Creator, a filmmaker and content
-          creator passionate about visual storytelling.
+          I'm Mavsi The Creator, a filmmaker, cinematographer
+          and visual storyteller based in Nigeria.
         </p>
 
         <p>
-          From cinematography and video editing to motion
-          graphics and short films, I love using visuals
-          to communicate emotions and tell stories people remember.
+          I create content that speaks, moves and leaves
+          a lasting impression. From cinematic videos to
+          motion graphics, I use visuals to tell stories
+          that people feel.
         </p>
 
-        <p>
-          Every project is an opportunity to grow,
-          experiment and create something meaningful.
-        </p>
-
-        <a href="#contact" class="button button-primary">
+        <a href="#contact" class="button button-red">
           LET'S CREATE TOGETHER ↗
         </a>
-
-        <div class="signature">
-          Mavsi The Creator.
-        </div>
-
       </div>
 
     </div>
-
   </section>
 
   <!-- SERVICES -->
 
-  <section class="services" id="services">
-
+  <section class="services section-pad" id="services">
     <div class="container">
 
-      <div class="section-heading reveal">
+      <p class="eyebrow reveal">WHAT I BRING TO THE TABLE</p>
+      <h2 class="section-title reveal">BUILT ON <span>CREATIVITY.</span></h2>
 
-        <div>
+      <div class="service-grid">
 
-          <div class="section-label">What I Do</div>
-
-          <h2 class="section-title">
-            Creativity with<br>
-            <span class="service-highlight">a purpose.</span>
-          </h2>
-
-        </div>
-
-        <p class="section-description">
-          Visual services to help turn ideas into
-          compelling stories.
-        </p>
-
-      </div>
-
-      <div class="services-grid">
-
-        <article class="service reveal">
-
-          <div class="service-number">
-            01 / VISUAL PRODUCTION
-          </div>
-
+        <article class="service-card reveal">
+          <span>01</span>
           <h3>Cinematography</h3>
-
-          <p>
-            Cinematic visuals for events, weddings,
-            creative projects and everyday stories.
-          </p>
-
+          <p>Visual production for events, weddings, creative shoots and stories.</p>
         </article>
 
-        <article class="service reveal">
-
-          <div class="service-number">
-            02 / POST-PRODUCTION
-          </div>
-
+        <article class="service-card reveal">
+          <span>02</span>
           <h3>Video Editing</h3>
-
-          <p>
-            Story-driven editing, colour grading,
-            sound synchronisation and transitions.
-          </p>
-
+          <p>Story-driven editing, colour grading, transitions and sound synchronisation.</p>
         </article>
 
-        <article class="service reveal">
-
-          <div class="service-number">
-            03 / DIGITAL ART
-          </div>
-
+        <article class="service-card reveal">
+          <span>03</span>
           <h3>Motion Graphics</h3>
+          <p>Typography animation, creative titles and dynamic visual design.</p>
+        </article>
 
-          <p>
-            Typography animation, creative titles
-            and motion design for digital content.
-          </p>
-
+        <article class="service-card reveal">
+          <span>04</span>
+          <h3>Content Creation</h3>
+          <p>Short films, social media videos and original digital content.</p>
         </article>
 
       </div>
-
     </div>
-
   </section>
 
   <!-- CONTACT -->
 
-  <section class="contact" id="contact">
-
+  <section class="contact section-pad" id="contact">
     <div class="container reveal">
 
-      <div class="section-label contact-label">
-        The Beginning of Something Great
-      </div>
+      <p class="eyebrow">HAVE A STORY TO TELL?</p>
 
-      <h2 class="section-title serif">
-        Have a story?<br>
-        <span>Let's tell it.</span>
-      </h2>
+      <h2>LET'S CREATE<br>SOMETHING <span>UNFORGETTABLE.</span></h2>
 
-      <p class="section-description">
-        Have a project in mind or want to collaborate?
-        Let's talk about what we can create together.
+      <p class="muted">
+        Have a project in mind? Let's bring your vision to life.
       </p>
 
-      <div class="contact-buttons">
-
-        <a
+      <div class="contact-links">
+        <a class="button button-red"
           href="https://wa.me/2347026906976"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button button-primary">
-
-          CONTACT ME ON WHATSAPP ↗
-
+          target="_blank" rel="noopener noreferrer">
+          WHATSAPP ↗
         </a>
 
-        <a
-          href="mailto:emmanuelchigozirim345@gmail.com"
-          class="button contact-secondary">
-
+        <a class="button button-outline"
+          href="mailto:emmanuelchigozirim345@gmail.com">
           SEND AN EMAIL ↗
-
         </a>
 
+        <a class="button button-outline"
+          href="https://www.instagram.com/heismavsi/"
+          target="_blank" rel="noopener noreferrer">
+          INSTAGRAM ↗
+        </a>
       </div>
 
-      <p class="social-text">
-        FOLLOW MY CREATIVE JOURNEY:
-
-        <a
-          href="https://www.instagram.com/heismavsi/"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          @HEISMAVSI ↗
-
-        </a>
-      </p>
+      <p class="social-note">FOLLOW THE JOURNEY: @HEISMAVSI</p>
 
     </div>
-
   </section>
 
 </main>
 
-<!-- FOOTER -->
-
-<footer>
-
+<footer class="footer">
   <div class="container footer-content">
-
-    <a href="#home" class="footer-brand">
-      MAVSI.
-      <span>THE CREATOR</span>
+    <a href="#home" class="brand">
+      MAVSI<span>.</span>
+      <small>THE CREATOR</small>
     </a>
 
-    <p>
-      © <span id="year"></span>
-      Mavsi The Creator. All rights reserved.
-    </p>
+    <p>FILM / CREATE / INSPIRE / REPEAT</p>
 
-    <div class="footer-socials">
-
-      <a
-        href="https://www.instagram.com/heismavsi/"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        INSTAGRAM ↗
-
-      </a>
-
-      <a
-        href="https://wa.me/2347026906976"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        WHATSAPP ↗
-
-      </a>
-
-    </div>
-
+    <p>© <span id="year"></span> MAVSI THE CREATOR</p>
   </div>
-
 </footer>
 
-<script src="script.js" defer></script>
-
 </body>
-</html>
+</html></html>
