@@ -1,113 +1,91 @@
-// MOBILE NAVIGATION
+// MOBILE MENU
 
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
 if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
 
-  menuToggle.addEventListener('click', () => {
-
-    const open = navLinks.classList.toggle('open');
-
+    menuToggle.textContent = open ? "✕" : "☰";
+    menuToggle.setAttribute("aria-expanded", String(open));
     menuToggle.setAttribute(
-      'aria-expanded',
-      String(open)
+      "aria-label",
+      open ? "Close menu" : "Open menu"
     );
-
-    menuToggle.setAttribute(
-      'aria-label',
-      open ? 'Close menu' : 'Open menu'
-    );
-
-    menuToggle.textContent = open ? '✕' : '☰';
-
   });
 
-  document.querySelectorAll('#navLinks a').forEach(link => {
-
-    link.addEventListener('click', () => {
-
-      navLinks.classList.remove('open');
-
-      menuToggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
-
-      menuToggle.setAttribute(
-        'aria-label',
-        'Open menu'
-      );
-
-      menuToggle.textContent = '☰';
-
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.textContent = "☰";
+      menuToggle.setAttribute("aria-expanded", "false");
     });
-
   });
-
 }
 
+// SCROLL ANIMATIONS
 
-// SCROLL REVEAL ANIMATIONS
+const revealItems = document.querySelectorAll(".reveal");
 
-const revealItems = document.querySelectorAll('.reveal');
-
-if ('IntersectionObserver' in window) {
-
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(entries => {
-
     entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach(item => observer.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add("visible"));
+}
+
+// COPYRIGHT YEAR
+
+const year = document.getElementById("year");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+// AUTOPLAY VIDEOS WHEN VISIBLE
+// Videos play silently because browsers restrict
+// autoplay with sound.
+
+const videos = document.querySelectorAll("video.autoplay-video");
+
+videos.forEach(video => {
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+
+  video.addEventListener("click", () => {
+    video.muted = !video.muted;
+  });
+});
+
+if ("IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const video = entry.target;
 
       if (entry.isIntersecting) {
-
-        entry.target.classList.add('visible');
-
-        observer.unobserve(entry.target);
-
+        video.play().catch(() => {
+          // Some browsers require the visitor
+          // to press play manually.
+        });
+      } else {
+        video.pause();
       }
-
     });
+  }, { threshold: 0.25 });
 
-  }, {
-    threshold: 0.12
-  });
-
-  revealItems.forEach(item => {
-    observer.observe(item);
-  });
-
+  videos.forEach(video => videoObserver.observe(video));
 } else {
-
-  revealItems.forEach(item => {
-    item.classList.add('visible');
+  videos.forEach(video => {
+    video.play().catch(() => {});
   });
-
 }
-
-
-// AUTOMATIC COPYRIGHT YEAR
-
-const yearElement = document.getElementById('year');
-
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
-
-
-// PAUSE OTHER VIDEOS WHEN ONE STARTS PLAYING
-
-document.querySelectorAll('video').forEach(video => {
-
-  video.addEventListener('play', () => {
-
-    document.querySelectorAll('video').forEach(otherVideo => {
-
-      if (otherVideo !== video) {
-        otherVideo.pause();
-      }
-
-    });
-
-  });
-
-});
